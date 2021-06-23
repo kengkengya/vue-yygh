@@ -1,6 +1,6 @@
 # vue-admin-template
 
-> A minimal vue admin template with Element UI & axios & iconfont & permission control & lint
+> 与yygh-parent配套的vue前端页面，主要完成各大医院预约挂号系统
 
 **Live demo:** http://panjiachen.github.io/vue-admin-template
 
