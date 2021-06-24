@@ -1,5 +1,5 @@
-import {login, logout, getInfo} from '@/api/login'
-import {getToken, setToken, removeToken} from '@/utils/auth'
+import { login, logout, getInfo } from '@/api/login'
+import { getToken, setToken, removeToken } from '@/utils/auth'
 
 const user = {
   state: {
@@ -25,7 +25,7 @@ const user = {
   },
 
   actions: {
-    Login({commit}) {
+    Login({ commit }) {
       const data = {
         'token': 'admin'
       }
@@ -33,7 +33,7 @@ const user = {
       commit('SET_TOKEN', data.token)
     },
 
-    GetInfo({commit}) {
+    GetInfo({ commit }) {
       const data = {
         'roles': [
           'admin'
@@ -49,7 +49,7 @@ const user = {
     },
 
     // 登出
-    LogOut({commit, state}) {
+    LogOut({ commit, state }) {
       return new Promise((resolve, reject) => {
         commit('SET_TOKEN', '')
         commit('SET_ROLES', [])
