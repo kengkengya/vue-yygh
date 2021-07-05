@@ -62,7 +62,28 @@ export const constantRouterMap = [
         component: () => import('@/views/hospitalSet/add'),
         meta: { title: '医院设置编辑', icon: 'tree' ,nocahe:true},
         hidden:true
+      },
+      {
+        path: 'hosp/list',
+        name: '医院列表',
+        component: () => import('@/views/hospital/list'),
+        meta: { title: '医院列表', icon: 'table' }
+      },
+      {
+        path: 'hospital/show/:id',
+        name: '查看',
+        component: () => import('@/views/hospital/show'),
+        meta: { title: '查看', noCache: true },
+        hidden: true
+      },
+      {
+        path: 'hospital/schedule/:hoscode',
+        name: '排班',
+        component: () => import('@/views/hospital/schedule'),
+        meta: { title: '排班', noCache: true },
+        hidden: true
       }
+
     ]
   },
   {
